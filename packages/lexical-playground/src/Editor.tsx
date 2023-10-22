@@ -8,6 +8,7 @@
 
 import {AutoFocusPlugin} from '@lexical/react/LexicalAutoFocusPlugin';
 import {CharacterLimitPlugin} from '@lexical/react/LexicalCharacterLimitPlugin';
+import {CharacterLimitPlugin as CharacterLimitPlugin__EXPERIMENTAL} from '@lexical/react/LexicalCharacterLimitPlugin__EXPERIMENTAL';
 import {CheckListPlugin} from '@lexical/react/LexicalCheckListPlugin';
 import {ClearEditorPlugin} from '@lexical/react/LexicalClearEditorPlugin';
 import LexicalClickableLinkPlugin from '@lexical/react/LexicalClickableLinkPlugin';
@@ -87,6 +88,7 @@ export default function Editor(): JSX.Element {
       isMaxLength,
       isCharLimit,
       isCharLimitUtf8,
+      isCharLimit3,
       isRichText,
       showTreeView,
       showTableOfContents,
@@ -262,6 +264,11 @@ export default function Editor(): JSX.Element {
             charset={isCharLimit ? 'UTF-16' : 'UTF-8'}
             maxLength={5}
           />
+        )}
+        {isCharLimit3 && (
+          <CharacterLimitPlugin__EXPERIMENTAL maxLength={5}>
+            {(overflowed) => <span>{overflowed}</span>}
+          </CharacterLimitPlugin__EXPERIMENTAL>
         )}
         {isAutocomplete && <AutocompletePlugin />}
         <div>{showTableOfContents && <TableOfContentsPlugin />}</div>

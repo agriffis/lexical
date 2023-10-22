@@ -126,6 +126,7 @@ const moduleResolution = [
   'useLexicalNodeSelection',
   'LexicalMarkdownShortcutPlugin',
   'LexicalCharacterLimitPlugin',
+  'LexicalCharacterLimitPlugin__EXPERIMENTAL',
   'LexicalHashtagPlugin',
   'LexicalErrorBoundary',
   'LexicalPlainTextPlugin',

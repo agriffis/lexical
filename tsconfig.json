@@ -123,6 +123,9 @@
       "@lexical/react/LexicalCharacterLimitPlugin": [
         "./packages/lexical-react/src/LexicalCharacterLimitPlugin.tsx"
       ],
+      "@lexical/react/LexicalCharacterLimitPlugin__EXPERIMENTAL": [
+        "./packages/lexical-react/src/LexicalCharacterLimitPlugin__EXPERIMENTAL.tsx"
+      ],
       "@lexical/react/LexicalClearEditorPlugin": [
         "./packages/lexical-react/src/LexicalClearEditorPlugin.ts"
       ],

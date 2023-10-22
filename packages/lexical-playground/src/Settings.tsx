@@ -24,6 +24,7 @@ export default function Settings(): JSX.Element {
       isMaxLength,
       isCharLimit,
       isCharLimitUtf8,
+      isCharLimit3,
       isAutocomplete,
       showTreeView,
       showNestedEditorTreeView,
@@ -107,6 +108,11 @@ export default function Settings(): JSX.Element {
             onClick={() => setOption('isCharLimitUtf8', !isCharLimitUtf8)}
             checked={isCharLimitUtf8}
             text="Char Limit (UTF-8)"
+          />
+          <Switch
+            onClick={() => setOption('isCharLimit3', !isCharLimit3)}
+            checked={isCharLimit3}
+            text="Char Limit (Experimental)"
           />
           <Switch
             onClick={() => setOption('isMaxLength', !isMaxLength)}
